@@ -1,6 +1,8 @@
 # WBPlayer
 Windows Git setup:
 http://tech.pro/tutorial/1840/setting-up-git-and-github-from-the-windows-command-prompt
+
+Mac Git setup:
 	
 Download the WBPlayer source files as zip here:
 https://github.com/raf101/WBPlayer/archive/master.zip
