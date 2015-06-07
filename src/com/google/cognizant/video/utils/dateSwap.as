@@ -7,8 +7,8 @@ package com.google.cognizant.video.utils {
 	 * @created 6/7/2015 10:02 PM
 	 */
 		
-	public function dateSwap ( videoScheds:Array ):VideoData {
-		var now:Date = new Date();
+	public function dateSwap ( videoScheds:Array, currentDate:Date = null ):VideoData {
+		var now:Date = currentDate || new Date();
 		var videoSched:VideoSched;
 		var len:int = videoScheds.length;
 		for ( var i:int = 0; i < len; i++ ) {
