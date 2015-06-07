@@ -5,9 +5,9 @@
     <movie outputType="Application" />
     <movie input="" />
     <movie path="bin\WBPlayer.swf" />
-    <movie fps="30" />
-    <movie width="800" />
-    <movie height="600" />
+    <movie fps="24" />
+    <movie width="300" />
+    <movie height="250" />
     <movie version="10" />
     <movie minorVersion="1" />
     <movie platform="Flash Player" />

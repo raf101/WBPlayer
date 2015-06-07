@@ -40,7 +40,7 @@ package com.google.cognizant.video.events {
 		
 		public function CustomVideoEvent ( type:String, data:VideoEventData = null, bubbles:Boolean=false, cancelable:Boolean=false ) { 
 			super(type, bubbles, cancelable);
-			_data = data || new VideoEventData();
+			_data = data;
 		} 
 		
 		public override function clone ():Event { 
