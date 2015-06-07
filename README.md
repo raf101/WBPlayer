@@ -5,11 +5,16 @@ http://tech.pro/tutorial/1840/setting-up-git-and-github-from-the-windows-command
 Mac Git setup:
 	
 Git pull:
-	$ git fetch
-	$ git merge origin/master
+
+$ git fetch
+
+$ git merge origin/master
 
 Git commit:
-	$ git commit -a
+
+$ git commit -a
+
+$ git push master
 	
 Download the WBPlayer source files as zip here:
 https://github.com/raf101/WBPlayer/archive/master.zip
