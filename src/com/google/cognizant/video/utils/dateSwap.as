@@ -1,34 +1,34 @@
 package com.google.cognizant.video.utils {
 	import com.google.cognizant.video.data.VideoData;
-	import com.google.cognizant.video.data.VideoSched;
+	import com.google.cognizant.video.data.ScheduledData;
 	/**
 	 * ...
 	 * @author Rafael Nepomuceno
 	 * @created 6/7/2015 10:02 PM
 	 */
 		
-	public function dateSwap ( videoScheds:Array, currentDate:Date = null ):VideoData {
+	public function dateSwap ( schedsData:Array, currentDate:Date = null ):String {
 		var now:Date = currentDate || new Date();
-		var videoSched:VideoSched;
-		var len:int = videoScheds.length;
+		var data:ScheduledData;
+		var len:int = schedsData.length;
 		for ( var i:int = 0; i < len; i++ ) {
-			videoSched = videoScheds[i];
+			data = schedsData[i];
 			
-			if (!videoSched.begin && !videoSched.end) { // default always return
-				return videoSched.videoData;
-			} else if (!videoSched.begin) { // returns video before end date.
-				if (now < videoSched.end)
-					return videoSched.videoData;
-			} else if (!videoSched.end) { // returns video during and after begin date.
-				if (videoSched.begin >= now)
-					return videoSched.videoData;
+			if (!data.begin && !data.end) { // default always return
+				return data.id;
+			} else if (!data.begin) { // returns video before end date.
+				if (now < data.end)
+					return data.id;
+			} else if (!data.end) { // returns video during and after begin date.
+				if (data.begin >= now)
+					return data.id;
 			} else { // return video between begin and end date.
-				if (now >= videoSched.begin && now < videoSched.end)
-					return videoSched.videoData;
+				if (now >= data.begin && now < data.end)
+					return data.id;
 			}
 		}
 		
-		return new VideoData('none');
+		return '';
 	}
 
 }
