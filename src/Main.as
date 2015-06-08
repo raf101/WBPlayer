@@ -1,38 +1,1 @@
-package {
-	import com.google.cognizant.video.data.ScheduledData;
-	import com.google.cognizant.video.utils.dateSwap;
-	import flash.display.Sprite;
-	import flash.events.Event;
-	
-	/**
-	 * ...
-	 * @author Rafael Nepomuceno
-	 */
-	public class Main extends Sprite {
-		
-		public function Main():void {
-			if (stage) init();
-			else addEventListener(Event.ADDED_TO_STAGE, init);
-		}
-		
-		private function init(e:Event = null):void {
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			// entry point
-			
-			dateSwapTest();
-		}
-		
-		private function dateSwapTest (  ):void {
-			var testDate:Date = new Date(2015, 5, 7); // For testing
-			
-			var schedPre:ScheduledData = new ScheduledData('pre', new Date(2015, 5, 6, 23), new Date(2015, 5, 7));
-			var schedNow:ScheduledData = new ScheduledData('now', new Date(2015, 5, 7), new Date(2015, 5, 9));
-			var schedPost:ScheduledData = new ScheduledData('post', new Date(2015, 5, 9), new Date(2015, 5, 10));
-			
-			//trace(dateSwap([schedPre, schedNow, schedPost]));
-			trace(dateSwap([schedPre, schedNow, schedPost], testDate)); // Test using test date
-			// -- result 'now'
-		}
-	}
-	
-}
+﻿package {	import com.google.cognizant.video.data.ScheduledData;	import com.google.cognizant.video.utils.dateSwap;	import flash.events.Event;	import flash.display.MovieClip;	import com.google.ads.studio.utils.StudioClassAccessor;	import flash.display.DisplayObject;	import com.google.cognizant.video.components.VideoPlayer;	import com.google.cognizant.video.data.PlayerSettings;	import com.google.cognizant.video.data.VideoData;	import flash.geom.Rectangle;	import com.google.ads.studio.video.VideoPlayerAdvanced;	import com.google.ads.studio.events.StudioVideoEvent;		/**	 * ...	 * @author Rafael Nepomuceno	 */	public class Main extends MovieClip {		public var testVid:VideoPlayerAdvanced;				public function Main():void {			if (stage) init();			else addEventListener(Event.ADDED_TO_STAGE, init);		}				private function init(e:Event = null):void {			removeEventListener(Event.ADDED_TO_STAGE, init);			// entry point						//dateSwapTest();			testVideoPlayer();		}				private function dateSwapTest ():void {			var testDate:Date = new Date(2015, 5, 7); // For testing						var schedPre:ScheduledData = new ScheduledData('pre', new Date(2015, 5, 6, 23), new Date(2015, 5, 7));			var schedNow:ScheduledData = new ScheduledData('now', new Date(2015, 5, 7), new Date(2015, 5, 9));			var schedPost:ScheduledData = new ScheduledData('post', new Date(2015, 5, 9), new Date(2015, 5, 10));						//trace(dateSwap([schedPre, schedNow, schedPost]));			trace(dateSwap([schedPre, schedNow, schedPost], testDate)); // Test using test date			// -- result 'now'		}				private function testVideoPlayer ():void {			var e:Class = StudioClassAccessor.getClass('com.google.ads.studio.events.StudioVideoEvent');						trace(JSON.stringify(StudioVideoEvent.getAllPlayerAndPlaybackEvents()));			trace(StudioVideoEvent.getAllEvents());						var id:String = 'testVid';			var streamingData:Array = null;			var progressiveData:Array = [new VideoData('vid', 'video.flv')];			var dimension:Rectangle = new Rectangle(0, 0, 320, 250);			var startMuted:Boolean = true;			var autoPlay:Boolean = true;			var previewTime:Number = 15;			var componentInstance:Object = null; // VideoPlayerAdvanced instance			var autoDestroy:Boolean = true;			var settings:PlayerSettings = new PlayerSettings(id, streamingData, progressiveData, dimension, startMuted, autoPlay, previewTime, componentInstance, autoDestroy);						var video:VideoPlayer = new VideoPlayer();			video.init(settings);						addChild(video);		}	}	}
