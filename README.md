@@ -9,12 +9,18 @@ Git pull:
 
 $ git fetch
 
+$ git stash
+
 $ git merge origin/master
+
+
 
 
 Git commit:
 
 $ git commit -a -m "commit message"
+
+$ git add .
 
 $ git push
 
