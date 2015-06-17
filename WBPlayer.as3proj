@@ -52,7 +52,12 @@
   </includeLibraries>
   <!-- SWC Libraries -->
   <libraryPaths>
-    <!-- example: <element path="..." /> -->
+    <element path="lib\DoubleClick Studio v2 AS3\DoubleClickStudioLib.swc" />
+    <element path="lib\DoubleClick Studio v2 AS3\Expanding.swc" />
+    <element path="lib\DoubleClick Studio v2 AS3\Loader.swc" />
+    <element path="lib\DoubleClick Studio v2 AS3\VideoPlayer.swc" />
+    <element path="lib\DoubleClick Studio v2 AS3\VideoPlayerAdvanced.swc" />
+    <element path="lib\DoubleClick Studio v2 AS3\VideoStreamingWrapper.swc" />
   </libraryPaths>
   <!-- External Libraries -->
   <externalLibraryPaths>
