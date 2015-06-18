@@ -16,7 +16,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'6/17/2015'</value>
+      <value>'6/19/2015'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -35,6 +35,14 @@
       <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\src</path-element>
       <path-element>C:\Program Files\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
+    <library-path append="true">
+      <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\lib\DoubleClick Studio v2 AS3\DoubleClickStudioLib.swc</path-element>
+      <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\lib\DoubleClick Studio v2 AS3\Expanding.swc</path-element>
+      <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\lib\DoubleClick Studio v2 AS3\Loader.swc</path-element>
+      <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\lib\DoubleClick Studio v2 AS3\VideoPlayer.swc</path-element>
+      <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\lib\DoubleClick Studio v2 AS3\VideoPlayerAdvanced.swc</path-element>
+      <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\lib\DoubleClick Studio v2 AS3\VideoStreamingWrapper.swc</path-element>
+    </library-path>
   </compiler>
   <file-specs>
     <path-element>C:\Documents and Settings\DIANNE\Desktop\WBPlayer\src\Main.as</path-element>
