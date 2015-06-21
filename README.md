@@ -5,7 +5,7 @@ These Classes are dedicated for DoubleClick Banner Ads for WB campaigns using Ac
 If you want your copy to easily update if there are changes, you can clone the git repository on your desktop.
 
 
-Open your terminal or command prompt. Go to the directory where you want to place your copy (cloned files). Ex: (cd <PATH>)
+Open your terminal or command prompt. Go to the directory where you want to place your copy (cloned files). Ex: (cd PATH...)
 
 Type in: git clone https://github.com/raf101/WBPlayer.git
 
@@ -23,6 +23,6 @@ Or if you just want a copy just download the WBPlayer source files as zip here:
 https://github.com/raf101/WBPlayer/archive/master.zip
 	
 	
-Please see the snippets of some useful functions usage here:
+Also please see the snippets of some useful functions usage here:
 
 https://gist.github.com/raf101
