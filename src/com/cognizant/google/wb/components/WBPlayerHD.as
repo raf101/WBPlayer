@@ -34,6 +34,8 @@
 		
 		public function get ctrl ():WBPlaybackController { return _ctrl; }
 		
+		public function get video ():ExPlayer { return _video; }
+		
 		public function WBPlayerHD (  ) {
 			_wb = WBCreative.getInstance();
 			
